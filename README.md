@@ -1,6 +1,7 @@
 # RDNetworkListener
 RDNetworkListener is an Objective C code snippet that provides a hook to the network connectivity allowing you to handle connection events.
 
+This is a wrapper written to the [reachability] written by [tony million]
 
 #Installation
 
@@ -30,6 +31,10 @@ Delegate Methods:
 {
     //When disconnected from the network
 }`
+
+#Credits
+[tony million]
+
 #License
 
 MIT
@@ -37,4 +42,7 @@ MIT
 
 **Free Software, Hell Yeah!**
 [my website]:http://ramitha.info/
+[reachability]:https://github.com/tonymillion/Reachability
+[tony million]:https://github.com/tonymillion
+
 For more about me, visit [my website]
