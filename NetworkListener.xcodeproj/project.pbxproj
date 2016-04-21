@@ -13,6 +13,8 @@
 		1A626BD81CC8CBC800E0F5FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A626BD61CC8CBC800E0F5FB /* Main.storyboard */; };
 		1A626BDA1CC8CBC800E0F5FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A626BD91CC8CBC800E0F5FB /* Assets.xcassets */; };
 		1A626BDD1CC8CBC800E0F5FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A626BDB1CC8CBC800E0F5FB /* LaunchScreen.storyboard */; };
+		1A626BED1CC8CCC000E0F5FB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A626BEC1CC8CCC000E0F5FB /* Reachability.m */; };
+		1A626BF31CC8CD1A00E0F5FB /* RDNetworkListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A626BF21CC8CD1A00E0F5FB /* RDNetworkListener.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		1A626BD91CC8CBC800E0F5FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A626BDC1CC8CBC800E0F5FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A626BDE1CC8CBC800E0F5FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A626BEB1CC8CCC000E0F5FB /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = RDNetworkListener/Reachability/Reachability.h; sourceTree = SOURCE_ROOT; };
+		1A626BEC1CC8CCC000E0F5FB /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = RDNetworkListener/Reachability/Reachability.m; sourceTree = SOURCE_ROOT; };
+		1A626BF11CC8CD1A00E0F5FB /* RDNetworkListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDNetworkListener.h; path = RDNetworkListener/RDNetworkListener.h; sourceTree = SOURCE_ROOT; };
+		1A626BF21CC8CD1A00E0F5FB /* RDNetworkListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDNetworkListener.m; path = RDNetworkListener/RDNetworkListener.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		1A626BCC1CC8CBC800E0F5FB /* NetworkListener */ = {
 			isa = PBXGroup;
 			children = (
+				1A626BE81CC8CC5A00E0F5FB /* RDNetworkListener */,
 				1A626BD01CC8CBC800E0F5FB /* AppDelegate.h */,
 				1A626BD11CC8CBC800E0F5FB /* AppDelegate.m */,
 				1A626BD31CC8CBC800E0F5FB /* ViewController.h */,
@@ -77,6 +84,25 @@
 				1A626BCE1CC8CBC800E0F5FB /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A626BE41CC8CC1900E0F5FB /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				1A626BEB1CC8CCC000E0F5FB /* Reachability.h */,
+				1A626BEC1CC8CCC000E0F5FB /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		1A626BE81CC8CC5A00E0F5FB /* RDNetworkListener */ = {
+			isa = PBXGroup;
+			children = (
+				1A626BE41CC8CC1900E0F5FB /* Reachability */,
+				1A626BF11CC8CD1A00E0F5FB /* RDNetworkListener.h */,
+				1A626BF21CC8CD1A00E0F5FB /* RDNetworkListener.m */,
+			);
+			name = RDNetworkListener;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +176,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A626BD51CC8CBC800E0F5FB /* ViewController.m in Sources */,
+				1A626BF31CC8CD1A00E0F5FB /* RDNetworkListener.m in Sources */,
 				1A626BD21CC8CBC800E0F5FB /* AppDelegate.m in Sources */,
+				1A626BED1CC8CCC000E0F5FB /* Reachability.m in Sources */,
 				1A626BCF1CC8CBC800E0F5FB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +292,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NetworkListener/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = info.ramitha.NetworkListener;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -275,6 +304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NetworkListener/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = info.ramitha.NetworkListener;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +330,7 @@
 				1A626BE31CC8CBC800E0F5FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

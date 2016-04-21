@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RDNetworkListener.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<RDNetworkListenerDelegate>
 
+@property (weak, nonatomic) IBOutlet UILabel *lblConnectionStatus;
 
 @end
 
